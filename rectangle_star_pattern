@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class rectangle_star_pattern
+{
+    public static void main(String args[])
+    {
+        try
+        {
+            Scanner input = new Scanner(System.in);
+            int n,i,j,m;
+            System.out.print("Enter no of rows: ");
+            n=input.nextInt();
+            System.out.print("Enter no of columns: ");
+            m=input.nextInt();
+            for(i=1;i<=n;i++)
+            {
+                for(j=1;j<=m;j++)
+                {
+                    System.out.print("* ");
+                }
+                System.out.print("\n");
+            }
+        }
+         catch(Exception e)
+         {
+             System.out.print("Invalid Entry");
+         }
+
+    }
+}
