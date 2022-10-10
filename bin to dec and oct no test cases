@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class sony {
+    public static void main(String[] args){
+        try {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("enter a Binary number: ");
+            String bin = sc.nextLine();
+            int d = Integer.parseInt(bin,2);
+            System.out.println("Decimal value is: " + d);
+            String oct = Integer.toOctalString(d);
+            System.out.println("octal value is: " + oct);
+        }
+        catch (Exception e){
+            System.out.println("Enter valid binary number");
+        }
+    }
+}
