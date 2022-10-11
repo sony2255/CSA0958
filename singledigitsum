@@ -1,0 +1,40 @@
+import java.util.*;
+public class singledigitsum {
+    public static void main(String[] args){
+        try{
+            int n,num,sum=0,r,count=0;
+            Scanner sc=new Scanner(System.in);
+            System.out.println("enter the value of n: ");
+            n=sc.nextInt();
+            System.out.println("enter"+n+" digit number:");
+            num=sc.nextInt();
+            int temp=num;
+            while(temp>0)
+            {
+                r=temp%10;
+                count=count+1;
+                temp=temp/10;
+            }
+            System.out.println("no of terms="+count);
+            if(count==n) {
+                while (num>0 || sum>9) {
+                    if(num==0){
+                        num=sum;
+                        sum=0;
+                    }
+                    int k = num % 10;
+                    sum = sum + k;
+                    num = num / 10;
+                }
+                System.out.println(sum);
+            }
+            else {
+                System.out.println("enter valid no of terms.");
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println("invalid input provided.");
+        }
+    }
+}
